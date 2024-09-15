@@ -24,7 +24,7 @@ installed and loaded at the beginning of the script.
 
 ## Usage
 
-The script expects the dataset to be called "data.csv" and to be in the
+The script defines a function. sdt(), that expects the dataset to be called "data.csv" and to be in the
 project's working directory. Change the name of your data file and move
 it, or change the script accordingly.
 
@@ -32,7 +32,8 @@ Furthermore:
 - Your first column should be your participant/respondent ID or key.
 - Columns 2 through 5 should be your 'hits', 'misses', 'false_alarms' and 'correct_rejections' - in this order, with these names.
 
-
+Import your csv data (e.g., ```data <- read.csv("data.csv")```, change or rename your file accordingly) and then run sdt(data).
+You can save the calculated parameteres to a new object, ```such as data_sdt <- sdt(data)``` and merge it with your data afterwards, ```cbind(data, data_sdt)```.
 ## Shiny App
 
 I have also created a Shiny app that allows you to upload your 
